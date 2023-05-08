@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Golos+Text:wght@400;500;700&family=Oswald:wght@300;400;500&family=Poppins:wght@600&display=swap');
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.site{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+.site-content{
+    flex-grow: 2;
+}
+.cabeçalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0009ad;
+    color: rgb(255, 255, 255);
+    height: 90px;
+}
+.pontuação{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+.btn-cad{
+    border: none;
+    padding: 0;
+    background-color: #0009ad; 
+    color: white;
+    transition: 0.3s ease;
+}
+#cadastro{
+    font-size: 50px;
+    position: relative;
+    margin-right: 20px;
+    filter: brightness(100%);
+}
+.btn-cad:hover{
+   transform: scale(1.2);
+}
+.cabeçalho .logo{
+    position: relative;
+    height: 73px;
+    margin-left: 15px;
+    transition: 0.3s ease;
+}
+ .cabeçalho h1{
+    font-size: 20px;
+}
+.content{
+    background-color: #fff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.atividade{
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Modal CSS */
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.2s;
+    z-index: 1000;
+  }
+  .contentmodal {
+    border-radius: 4px;
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background: #fff;
+    padding: 1em 2em;
+  }
+  .contentmodal a{
+    color: blue;
+    font-size: 30px;
+  }
+  .contentmodal .link{
+    color: blue;
+    font-size: 14px;
+  }
+   
+  .modal:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .title{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+
+  #cadnome,  #cademail,  #cadsenha{
+    margin-bottom: 10px;
+   }
+   
+  .footer {
+    text-align: right;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #cad-usuario-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+   
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #585858;
+    text-decoration: none;
+  }
+   
+  .footer-btn-sucess {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0%;
+    text-decoration: none;
+    background-color: #0009ad;
+    color: #ffffff;
+    border-radius: 3px;
+    transition: 0.3s all;
+  }
+  .footer-btn-sucess:hover{
+    width: 100%;
+    padding: 10px;
+    margin-top: 0%;
+    text-decoration: none;
+    background-color: #3b43d9;;
+    color: #ffffff;
+    border-radius: 3px;
+  }
+  
+
+
+
+
+/* Fim modal */
+
+h1{
+    text-align: center;
+}
+.container-slider{
+    display: flex;
+    width: 100vw;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.container-cards{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+.on {
+    display: inline;
+    animation: fadeIn 0.1s linear;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+#prev-button, #next-button{
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#prev-button img, #next-button img{
+    width: 100%;
+    height: 100%;
+}
+#prev-button:hover{
+    transform: scale(1.1);
+}
+#next-button:hover{
+    transform: scale(1.1);
+ }
+
+.estrelas{
+    display: flex;
+    justify-content: center;
+}
+#card{
+    margin-top: 5px;
+    border-radius: 25px;
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 3px;
+}
+.card-image .card-img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid  rgb(0, 9, 173);
+}
+.atividade{
+    margin: 10px;
+    font-size: 30px;
+    color: #0009ad;
+}
+.btn{
+   border: none;
+   font-size: 16px;
+   color: #fff;
+   padding: 8px 16px;
+   background-color: #0009ad;
+   border-radius: 6px;
+   margin: 10px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+.btn:hover{
+    background: #0f1bff;
+}
+.nav1{
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+}
+.nav-item{
+    position: relative;
+    padding: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+
+}
+.nav-item:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover:after{
+    width: 100%;
+}
+.categoria1, .categoria2, .categoria3, .categoria4, .categoria5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+}
+.rodapé{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0009ad;
+    color: rgb(255, 255, 255);
+    height: 100px;
+}
+
+@media (min-width: 480px){
+  .categoria1, .categoria2, .categoria3, .categoria4 {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding-right: 30px;
+}}
+  @media (min-width: 510px){
+  .categoria1, .categoria2, .categoria3, .categoria4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding-right: 30px;
+}}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="./assets/js/script.js" defer></script>
+  <link rel="icon" type="icon" href="./assets/img/logo.png">
+  <title>Journey</title>
+</head>
+
+<body class="site">
+  <div class="cabeçalho">
+    <button class="btn-cad"><a href="#"><img class="logo" type="button" src="./assets/img/logo.png"></a></button>
+    <div class="pontuação">
+      <h1 id="dados-usuario">Total de: <strong>0</strong> pontos</h1>
+    </div>
+    <button class="btn-cad"><a href="#demo-modalcad"><i class="bi bi-person-circle" id="cadastro"></i></a></button>
+    <!--<button class="btn-cad" href="#"><img src="/assets/img/cadastro.png"></button>-->
+  </div>
+  <article class="site-content content">
+    <div class="content">
+
+<!---Modal Cadastro--->
+
+          
+<div id="demo-modalcad" class="modal">
+  <div class="contentmodal">
+    <h1 class="title">Cadastro</h1>
+
+    <form id="cad-usuario-form">
+      <span id="msgAlertErroCad"></span>
+
+      <div>
+          <label for="cadnome" class="labelcad">Nome:</label>
+          <input type="text" name="cadnome" class="form-control" id="cadnome" placeholder="Digite o nome completo">
+      </div>
+
+
+      <div>
+          <label for="cademail" class="labelcad">E-mail:</label>
+          <input type="email" name="cademail" class="form-control" id="cademail" placeholder="Digite o seu melhor e-mail">
+      </div>
+
+
+      <div>
+          <label for="cadsenha">Senha:</label>
+          <input type="password" name="cadsenha" class="form-control" id="cadsenha" autocomplete="on" placeholder="Digite a senha">
+      </div>
+      
+    <div class="footer">
+      <input type="submit" class="footer-btn-sucess" id="cad-usuario-btn" value="Cadastrar">
+      <p>Já possui uma conta?<a href="#demo-modallog" class="link"> Clique aqui.</a></p>
+    </div>
+  </form>
+
+  
+    <a href="#" class="close">&times;</a>
+  </div>
+</div>
+
+<div id="demo-modallog" class="modal">
+  <div class="contentmodal">
+    <h1 class="title">Login</h1>
+
+    <form id="login-usuario-form">
+      <span id="msgAlertErroLogin"></span>
+
+      <div>
+          <label for="email" class="labelcad">Email:</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="Digite o seu melhor e-mail">
+      </div>
+
+
+      <div>
+          <label for="senha">Senha:</label>
+          <input type="password" name="senha" class="form-control" id="senha" autocomplete="on" placeholder="Digite a senha">
+      </div>
+      
+    <div class="footer">
+      <input type="submit" class="footer-btn-sucess" id="login-usuario-btn" value="Cadastrar">
+      <p>Não possui uma conta?<a href="#demo-modalcad" class="link"> Clique aqui.</a></p>
+    </div>
+  </form>
+
+  
+    <a href="#" class="close">&times;</a>
+  </div>
+</div>
+
+<!-- Fim do modal --->
+      <div class="container-slider">
+        <button id="prev-button"><img src="./assets/img/arrow2.png" alt="prev-button"></button>
+
+        <div class="container-cards">
+          <div id="card" class="slider on">
+            <div class="estrelas">
+              <p><i class="bi bi-star-fill" style="font-size: 20px; color: #d5be2c; padding-right: 10px;"></i></p>
+              <p><i class="bi bi-star-fill" style="font-size: 20px; color: #d5be2c; padding-right: 10px;"></i></p>
+              <p><i class="bi bi-star-fill" style="font-size: 20px; color: #d5be2c; "></i></p>
+            </div>
+            <div class="image-content">
+              <div class="card-image">
+                <img src="./assets/img/math.png" class="card-img">
+              </div>
+            </div>
+            <div class="card-content">
+              <h1 class="atividade">Matemática</h1>
+              <button class="btn">Jogar</button>
+            </div>
+          </div>
+          <div id="card" class="slider">
+            <div class="estrelas">
+              <p><i class="bi bi-star-fill" style="font-size: 20px; color: #d5be2c; padding-right: 10px;"></i></p>
+              <p><i class="bi bi-star-half" style="font-size: 20px; color: #d5be2c; padding-right: 10px;"></i></p>
+              <p><i class="bi bi-star" style="font-size: 20px; color: #d5be2c;"></i></p>
+            </div>
+            <div class="image-content">
+              <div class="card-image">
+                <img src="./assets/img/grammar.png" class="card-img">
+              </div>
+            </div>
+            <div class="card-content">
+              <h1 class="atividade">Português</h1>
+              <button class="btn">Jogar</button>
+            </div>
+          </div>
+        </div>
+
+        <button id="next-button"><img src="./assets/img/arrow.png" alt="next-button"></button>
+      </div>
+  </article>
+  <footer class="rodapé">
+    <div class="nav1">
+      <div class="categoria1">
+        <a href="#"> <i class="bi bi-house-fill"></i></a>
+        <a class="nav-item" href="#">Início</a>
+      </div>
+      <div class="categoria2">
+        <a href="#"><i class="bi bi-briefcase-fill"></i></a>
+        <a class="nav-item" href="#">Vagas</a>
+      </div>
+      <div class="categoria3">
+        <a href="#"><i class="bi bi-book-fill"></i></a>
+        <a class="nav-item" href="#">Cursos</a>
+      </div>
+      <div class="categoria4">
+        <a href="#"><i class="bi bi-people-fill"></i></a>
+        <a class="nav-item" href="#">Amigos</a>
+      </div>
+      <div class="categoria5">
+        <a href="#"><i class="bi bi-wrench-adjustable"></i></a>
+        <a class="nav-item" id="config" name="config" href="#">Config</a>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/js/custom.js"></script>
+</body>
+
+</html>
